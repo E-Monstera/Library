@@ -17,6 +17,7 @@ class Library {
     myLibrary;
     constructor() {
         this.myLibrary = [{ title: "title1", author: "author1", pages: 123, readStatus: true }];
+ 
     }
 
     addBook = () => {
@@ -36,6 +37,8 @@ class Library {
     // Loops through the myLibrary array (from readData()) and creates each container that is displayed on the DOM. Also adds up the statistics to display in the stats container.
 
     displayLibrary() {
+        let index = 0;      //defines an index that will be added to each delete and update button to allow us to find the item in the array
+        bookHolder.innerHTML = '';
         this.myLibrary.forEach(obj => {
 
         let container = document.createElement('article');      //Creates a container to hold the new book
@@ -48,12 +51,16 @@ class Library {
         let bookRead = document.createElement('p');
         let delButton = document.createElement('button');
         delButton.classList.add('delete');
+        delButton.setAttribute('id', index);
+        index ++;
+
         let updateButton = document.createElement('button');
         updateButton.classList.add('updateButton');
         let para_holder = document.createElement('div');
         let button_holder = document.createElement('div');
         para_holder.classList.add('para');
         button_holder.classList.add('button_hol');
+
 
         //textContent for the p elements, used to display book data to the user.
         bookTitle.textContent = obj.title;
@@ -66,6 +73,20 @@ class Library {
             bookRead.textContent = 'This book has not been read';
         }
         delButton.textContent = 'Remove book';
+
+        // delButton.addEventListener('click', ev => this.removeBook());
+
+        //This works but isn't acceptable
+        // let current = this;
+        // delButton.addEventListener('click', function () {
+        //     current.removeBook(index);
+            // console.log(current);
+        // });
+        // delButton.addEventListener('click', function (e){
+        //     console.log(e);
+        //     btn.addEventListener('click', this.removeBook());
+
+        // });
         updateButton.textContent = 'Change read status';
 
 
@@ -80,12 +101,17 @@ class Library {
         button_holder.appendChild(delButton);
         button_holder.appendChild(updateButton);
         // container.appendChild(delButton);
+
     });
     }
 
     // Triggered by remove button, this removes the book from the array, updates SaveData() and calls displayLibrary() to update the DOM
-    removeBook() {
-
+    removeBook(index) {
+        console.log('works');
+        // console.log('In function' + index);
+        // this.myLibrary.splice(index, 1);
+        // this.saveData();
+        // this.displayLibrary();
     }
 
     // This is triggered by a user updating the books read status. It updates the status of the specified book, calls SaveData() and calls displayLibrary()
@@ -127,6 +153,11 @@ const readInput = document.querySelector('#readInput');         //const for the 
 const submitButton = document.querySelector('#submitBook');
 submitButton.addEventListener('click', theLibrary.addBook);
 
+
+//updateReadStatus button for each book
+// const submitButton = document.querySelector('#submitBook');
+// submitButton.addEventListener('click', theLibrary.addBook);
+
 //Container to hold the books
 const bookHolder = document.querySelector('#book-holder');
 
@@ -134,8 +165,16 @@ const bookHolder = document.querySelector('#book-holder');
 theLibrary.readData();
 
 
-
-
+//Most recent struggle
+//Adds an event listener to each 'remove book' button
+// const removeButtons = document.querySelectorAll('.delete');
+// removeButtons.forEach((btn) => {
+//     btn.addEventListener('click', function (e) {
+//         let index = e.target.id;
+//         console.log(index);
+//         // theLibrary.removeBook(index)
+//     });
+// });
 
 
 
