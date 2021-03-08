@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Courgette', cursive, sans-serif;
+    font-size: 16px;
+    /* color: white; */
+}
+
+body{
+    /* background-color: rgb(30, 32, 43); */
+}
+
+/* 
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+} */
+
+
+h1{
+    text-align: center;
+    font-size: 3.5em;
+    padding-top: 20px;;
+    height: 15vh;
+    font-family: 'Courgette', cursive, sans-serif;
+}
+
+/* Container for all books and stats */
+#container{
+    display: block;
+    height: 85vh;
+}
+
+/* Container book title */
+#container h2{
+    padding: 20px 0;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* Aside for book stats and form */
+aside{
+    float: right;
+    background-color: rgb(107, 159, 204);
+    height: 100%;
+}
+
+#stats-container{
+    height: 35%;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+aside p{
+    font-size: 1.5em;
+}
+
+/* Table for statistics */
+table{
+    width: 70%;
+    font-size: 1.25em;
+    text-align: left;
+}
+
+form{
+    background-color: white;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+form label{
+    display: flex;
+    margin-top: 20px;
+}
+
+#submitBook{
+    width: 150px;
+    height: 40px;
+    background-color: aquamarine;
+    align-self: center;
+    /* border-style: none; */
+}
+
+/* container for all books */
+#book-holder{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Container for each individual book */
+.book{
+    margin: 0 25px;
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    background-color: white;
+}
+
+.book p{
+    margin: 20px 10px;
+
+}

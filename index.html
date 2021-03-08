@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Library</h1>
+    <hr>
+    <div id="container">
+        <aside>
+            <!--Book Stats-->
+            <!-- <hr> -->
+            <div id="stats-container">
+                <h2>Stats</h2>
+                <table>
+                    <tr>
+                        <th>Total Books:</th>
+                        <td id="total-books">0</td>
+                    </tr>
+                    <tr>
+                        <th>Read Books:</th>
+                        <td id="read-books">0</td>
+                    </tr>
+                    <tr>
+                        <th>Unread Books:</th>
+                        <td id="unread-books">0</td>
+                    </tr>
+                    <tr>
+                        <th>Total Pages:</th>
+                        <td id="total-pages">0</td>
+                    </tr>
+                </table>
+
+                <!-- <p id="total-books">Total Books: <span id="total-books">0</span></p>
+                <p id="read-books">Read Books: <span id="read-books">0</span></p>
+                <p id="unread-books">Unread Books: <span id="unread-books">0</span></p>
+                <p id="total-pages">Total Pages: <span id="total-pages">0</span></p> -->
+            </div>
+            <!--Input for add a new book, Need to turn this into a pop-up when I learn how - Probably with react-->
+            <form>
+                <label for="titleInput">Title: </label><input id="titleInput" type="text"><br>
+                <label for="authorInput">Author: </label><input id="authorInput" type="text"><br>
+                <label for="pagesInput">Total Pages: </label><input id="pagesInput" type="text"><br>
+                <div id="readcheckbox">
+                <label for="readInput">Read: </label><input id="readInput" type="checkbox">
+                </div><br>
+                <button input type="submit" id="submitBook">Add Book</button>
+            </form>
+        </aside>
+
+        <!--Section to hold the books as they are added-->
+        <h2>My Books</h2>
+        <section id="book-holder">
+
+
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="script.js"></script>
