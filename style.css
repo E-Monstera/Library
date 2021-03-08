@@ -9,19 +9,7 @@
 html{
     font-family: 'Courgette', cursive, sans-serif;
     font-size: 16px;
-    /* color: white; */
 }
-
-body{
-    /* background-color: rgb(30, 32, 43); */
-}
-
-/* 
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-} */
 
 
 h1{
@@ -102,13 +90,41 @@ form label{
 /* Container for each individual book */
 .book{
     margin: 0 25px;
-    height: 300px;
+    height: 275px;
     width: 300px;
     border-style: solid;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .book p{
-    margin: 20px 10px;
+    margin: 20px 40px;
+}
 
+.book h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button_hol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.delete{
+    background-color: rgb(131, 215, 218);
+    padding: 0 10px;
+    height: 40px;
+    width: 140px;
+}
+
+.updateButton{
+    padding: 0 10px;
+    width: 140px;
+    height: 40px;
+    background-color: rgb(131, 215, 218);
 }
