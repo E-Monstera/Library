@@ -10,12 +10,17 @@
 <body>
     <h1>Library</h1>
     <hr>
+    <!-- Container to hold everything underneath the header -->
     <div id="container">
+
+        <!-- Aside for the book stats and the form to submit a new book -->
         <aside>
-            <!--Book Stats-->
-            <!-- <hr> -->
+
+            <!-- Div for the statistics -->
             <div id="stats-container">
                 <h2>Stats</h2>
+
+                <!-- Table to hold each of the statistics -->
                 <table>
                     <tr>
                         <th>Total Books:</th>
@@ -34,13 +39,9 @@
                         <td id="total-pages">0</td>
                     </tr>
                 </table>
-
-                <!-- <p id="total-books">Total Books: <span id="total-books">0</span></p>
-                <p id="read-books">Read Books: <span id="read-books">0</span></p>
-                <p id="unread-books">Unread Books: <span id="unread-books">0</span></p>
-                <p id="total-pages">Total Pages: <span id="total-pages">0</span></p> -->
             </div>
-            <!--Input for add a new book, Need to turn this into a pop-up when I learn how - Probably with react-->
+
+            <!--Form to add a new book-->
             <form>
                 <label for="titleInput">Title: </label><input id="titleInput" type="text"><br>
                 <label for="authorInput">Author: </label><input id="authorInput" type="text"><br>
@@ -56,12 +57,8 @@
         <h2>My Books</h2>
         <section id="book-holder">
 
-
         </section>
-
     </div>
-
-
 </body>
 
 </html>
