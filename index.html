@@ -8,18 +8,30 @@
 </head>
 
 <body>
+    <div class="overlay">
+        <form>
+            <button id="closeOverlay">Cancel</button>
+            <label for="titleInput">Title: </label><input id="titleInput" type="text" required><br>
+            <label for="authorInput">Author: </label><input id="authorInput" type="text" required><br>
+            <label for="pagesInput">Total Pages: </label><input id="pagesInput" type="number"> required<br>
+            <div id="readcheckbox">
+            <label for="readInput">Read: </label><input id="readInput" type="checkbox">
+            </div><br>
+            <button input type="submit" id="submitBook">Add Book</button>
+        </form>
+    </div>
     <h1>Library</h1>
     <hr>
     <!-- Container to hold everything underneath the header -->
     <div id="container">
-
-        <!-- Aside for the book stats and the form to submit a new book -->
+        
+        <!-- Aside for the book stats -->
         <aside>
-
+            
             <!-- Div for the statistics -->
             <div id="stats-container">
                 <h2>Stats</h2>
-
+                
                 <!-- Table to hold each of the statistics -->
                 <table>
                     <tr>
@@ -39,18 +51,8 @@
                         <td id="total-pages">0</td>
                     </tr>
                 </table>
+                <button id="addBookButton">Add New Book</button>
             </div>
-
-            <!--Form to add a new book-->
-            <form>
-                <label for="titleInput">Title: </label><input id="titleInput" type="text"><br>
-                <label for="authorInput">Author: </label><input id="authorInput" type="text"><br>
-                <label for="pagesInput">Total Pages: </label><input id="pagesInput" type="text"><br>
-                <div id="readcheckbox">
-                <label for="readInput">Read: </label><input id="readInput" type="checkbox">
-                </div><br>
-                <button input type="submit" id="submitBook">Add Book</button>
-            </form>
         </aside>
 
         <!--Section to hold the books as they are added-->

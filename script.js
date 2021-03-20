@@ -219,3 +219,34 @@ bookHolder.addEventListener('click', function (e) {
         theLibrary.updateReadStatus(index);
     }
 });
+
+
+
+let overlayOn = false;
+// For Overlay
+function on() {
+    document.querySelector(".overlay").style.display = "flex";
+    overlayOn = true;
+    console.log('on');
+  }
+  
+  function off() {
+    document.querySelector(".overlay").style.display = "none";
+    overlayOn = false;
+    console.log('off');
+  } 
+
+const overlayButton = document.querySelector('#addBookButton');
+const closeOverlayButton = document.querySelector('#closeOverlay');
+
+
+overlayButton.addEventListener('click', () => {
+    if (!overlayOn){
+        on();
+    }
+    else{
+        off();
+    }
+})
+
+closeOverlayButton.addEventListener('click', off);
